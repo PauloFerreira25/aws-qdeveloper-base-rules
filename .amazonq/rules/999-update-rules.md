@@ -1,27 +1,28 @@
 When asked to update rules from base repository:
 
 Process:
-1. Create temporary directory: /tmp/amazonq-rules-update
-2. Download index from: https://raw.githubusercontent.com/PauloFerreira25/aws-qdeveloper-base-rules/main/.amazonq/rules/00-rules-index.md
-3. Parse index to get list of rule files
-4. Download each rule file to temporary directory using base URL: https://raw.githubusercontent.com/PauloFerreira25/aws-qdeveloper-base-rules/main/.amazonq/rules/
-5. Compare each downloaded file with existing file in .amazonq/rules/
-6. Update existing files with new content from downloaded files
-7. Add new files that don't exist locally
-8. Remove temporary directory
+1. Download and extract repository to temporary directory
+2. Compare each file from downloaded rules with existing rules
+3. Update existing files with new content
+4. Add new files that don't exist locally
+5. Clean up temporary directory
 
-Commands:
+Step 1 - Download and extract:
 ```bash
-# Create temp directory
 mkdir -p /tmp/amazonq-rules-update
+cd /tmp/amazonq-rules-update
+curl -L -o repo.zip https://github.com/PauloFerreira25/aws-qdeveloper-base-rules/archive/refs/heads/main.zip
+unzip -q repo.zip
+```
 
-# Download files (example for one file)
-curl -o /tmp/amazonq-rules-update/00-rules-index.md https://raw.githubusercontent.com/PauloFerreira25/aws-qdeveloper-base-rules/main/.amazonq/rules/00-rules-index.md
+Step 2 - Compare and update:
+- Read each file from /tmp/amazonq-rules-update/aws-qdeveloper-base-rules-main/.amazonq/rules/
+- Compare with existing files in project's .amazonq/rules/
+- Update files that have changes
+- Add new files that don't exist
 
-# Copy to project (after comparison)
-cp /tmp/amazonq-rules-update/*.md .amazonq/rules/
-
-# Cleanup
+Step 3 - Cleanup:
+```bash
 rm -rf /tmp/amazonq-rules-update
 ```
 

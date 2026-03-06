@@ -8,10 +8,17 @@ This project contains only the `.amazonq/rules/` directory with rule files that 
 
 ## Using these rules in your project
 
-### Option 1: Manual download
+### Option 1: Download ZIP
+Download the entire repository as ZIP:
+```
+https://github.com/PauloFerreira25/aws-qdeveloper-base-rules/archive/refs/heads/main.zip
+```
+Extract and copy the `.amazonq/rules/` directory to your project.
+
+### Option 2: Manual download
 Download the rules from the raw URLs below and place them in your project's `.amazonq/rules/` directory.
 
-### Option 2: Automated update
+### Option 3: Automated update
 Use rule 999 (see below) to automatically download and update rules in your project.
 
 ## Rule Files (Raw URLs)
