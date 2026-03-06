@@ -8,9 +8,15 @@ When [situation]:
 
 Example: [concrete case if necessary]
 
+Rule numbering:
+- 01-29: Reserved for base rules from this repository
+- 30+: Project-specific rules
+
 When creating new rule:
 - Identify specific problem
 - Create file: XX-descriptive-name.md (XX = next number after last existing file)
+- If base rule: use 01-29 range
+- If project-specific rule: start from 30
 - Use format above
 - Add to 00-rules-index.md
 
