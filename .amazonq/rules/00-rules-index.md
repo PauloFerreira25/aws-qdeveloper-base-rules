@@ -15,3 +15,4 @@ When asked to "read the rules":
 06-minimal-execution.md: minimal means quality within scope, not lazy thinking
 07-context-building.md: read all relevant files, build complete context
 08-copy-duplicate.md: how to properly copy and duplicate code/models
+09-operation-order.md: operation order matters, move before delete, create before remove
