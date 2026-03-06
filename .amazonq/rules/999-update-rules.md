@@ -16,10 +16,16 @@ unzip -q repo.zip
 ```
 
 Step 2 - Compare and update:
-- Read each file from /tmp/amazonq-rules-update/aws-qdeveloper-base-rules-main/.amazonq/rules/
-- Compare with existing files in project's .amazonq/rules/
-- Update files that have changes
-- Add new files that don't exist
+- List all .md files in /tmp/amazonq-rules-update/aws-qdeveloper-base-rules-main/.amazonq/rules/
+- For each file:
+  1. Calculate MD5 of downloaded file
+  2. Calculate MD5 of existing file in project's .amazonq/rules/ (if exists)
+  3. If MD5 differs or file doesn't exist locally:
+     - Read both files completely (downloaded and existing)
+     - Compare line by line to understand changes
+     - Update existing file or create new file with downloaded content
+  4. If MD5 is identical: skip (no changes needed)
+- Report which files were updated, added, or skipped
 
 Step 3 - Cleanup:
 ```bash
