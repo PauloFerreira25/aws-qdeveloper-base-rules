@@ -7,6 +7,8 @@ When asked to "read the rules":
 - NEVER summarize or explain what was read
 - After reading, output: "✓ Rules loaded successfully"
 
+Base URL for raw files: https://raw.githubusercontent.com/PauloFerreira25/aws-qdeveloper-base-rules/main/.amazonq/rules/
+
 01-rules-format.md: rule creation and updates, format, structure, best practices
 02-unknown-problems.md: how to proceed when you don't know how to solve a problem
 03-no-rollback.md: don't revert changes when encountering problems
@@ -18,3 +20,4 @@ When asked to "read the rules":
 09-operation-order.md: operation order matters, move before delete, create before remove
 10-verified-information.md: provide only verified, documented, provable information
 11-concurrency-examples.md: demonstrate concurrent scenarios with clear sequential task numbering
+999-update-rules.md: automated process to download and update rules from base repository
