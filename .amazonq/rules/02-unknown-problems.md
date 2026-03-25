@@ -15,3 +15,12 @@ Before proposing solutions:
 - Indicate viable paths within official limitations
 - Never assume something "works" outside documented scope
 - Never extrapolate viability of resources or technologies
+
+When in a loop (same problem after 3+ attempts):
+- Stop immediately
+- Admit the loop explicitly to the user
+- Identify the root cause layer: is it CSS? framework internals? native behavior?
+- Investigate one layer deeper before proposing any new solution
+- Never retry the same approach with minor variations
+- Never revert to a previous solution that was already rejected
+- Ask the user for guidance if root cause cannot be identified
