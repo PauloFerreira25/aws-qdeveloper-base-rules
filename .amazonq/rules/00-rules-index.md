@@ -20,4 +20,5 @@ Base URL for raw files: https://raw.githubusercontent.com/PauloFerreira25/aws-qd
 09-operation-order.md: operation order matters, move before delete, create before remove
 10-verified-information.md: provide only verified, documented, provable information
 11-concurrency-examples.md: demonstrate concurrent scenarios with clear sequential task numbering
+12-no-redundancy.md: avoid redundant solutions, single source of truth per concern
 999-update-rules.md: automated process to download and update rules from base repository
